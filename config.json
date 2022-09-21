@@ -1,0 +1,43 @@
+{
+    "datasets":[
+        {
+            "siteId": "brax",
+            "timeAgo": "60d",
+            "timeStep": "1d",
+            "outliersDetectionMethod": "3-sigmas",
+            "metricesList": ["Revenue", "Basket"],
+            "siteCollectFilters": null
+        },
+        {
+            "siteId": "felgenshop",
+            "timeAgo": "60d",
+            "timeStep": "1d",
+            "outliersDetectionMethod": "3-sigmas",
+            "metricesList": ["all"],
+            "siteCollectFilters": {
+                "minVisitorsPerTimeStep": 30,
+                "attributesFilterParams": {
+                    "Browser": {
+                        "level": 2,
+                        "top": 2
+                    }
+                }
+            }
+        }
+    ],
+    "detectionMethods":{
+        "3-sigmas": {
+            "outliersMultiplier": 2.0,
+            "strongOutliersMultiplier": 3.0
+        }
+    },
+    "genCollectFilters":{
+        "minVisitorsPerTimeStep": 30,
+        "attributesFilterParams": {
+            "Browser": {
+                "level": 1,
+                "top": 0
+            }
+        }
+    }
+}
